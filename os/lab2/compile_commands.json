@@ -1,0 +1,277 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-Wno-main",
+      "-ffreestanding",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I",
+      "include",
+      "-c",
+      "-o",
+      "init/main.o",
+      "init/main.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/init/main.c",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/init/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "clock.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/clock.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "dtb.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/dtb.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "plic.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/plic.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "trap.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/trap.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-g",
+      "-c",
+      "-o",
+      "trapentry.o",
+      "trapentry.S"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/trapentry.S",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/trapentry.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "-o",
+      "rtc/rtc_goldfish.o",
+      "rtc/rtc_goldfish.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/rtc/rtc_goldfish.c",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/rtc/rtc_goldfish.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "-o",
+      "rtc/rtc_sunxi.o",
+      "rtc/rtc_sunxi.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/rtc/rtc_sunxi.c",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/rtc/rtc_sunxi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "-o",
+      "rtc/rtc.o",
+      "rtc/rtc.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/rtc/rtc.c",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/rtc/rtc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "-o",
+      "uart/uart.o",
+      "uart/uart.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/uart/uart.c",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/uart/uart.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "-o",
+      "uart/uart_sunxi.o",
+      "uart/uart_sunxi.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/uart/uart_sunxi.c",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/uart/uart_sunxi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "-o",
+      "uart/uart_qemu.o",
+      "uart/uart_qemu.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/uart/uart_qemu.c",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab2/trap/uart/uart_qemu.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "kdebug.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/lib",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/lib/kdebug.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "sbi.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/lib",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/lib/sbi.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "string.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab2/lib",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab2/lib/string.c"
+  }
+]

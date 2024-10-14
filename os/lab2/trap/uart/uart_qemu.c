@@ -1,5 +1,8 @@
 #include <uart.h>
 #include <stddef.h>
+#include <trap.h>
+#include <string.h>
+#include <rtc.h>
 static int8_t uart_16550a_read();
 static void uart_16550a_directly_write(int8_t c);
 static void uart_16550a_interrupt_handler();
@@ -80,12 +83,28 @@ static void uart_16550a_putc(int8_t c)
     uart_16550a_directly_write(c);
 }
 
+void keyboard_interrupter(int8_t c)
+{
+    if(c==0x12 || c==0x13)
+    {
+        kprintf("executed a control command right now:\n");
+        ctrl_commands(c);
+    }
+}
+
+
 static void uart_16550a_interrupt_handler()
 {
     volatile struct uart_qemu_regs *regs = (struct uart_qemu_regs *)uart_device.uart_start_addr;
     while (regs->LSR & (1 << LSR_DR)) {
         int8_t c = uart_read();
         if (c > -1)
+        {
+            if(c==0xd)
+                kprintf("\n");
+            keyboard_interrupter(c);
             uart_16550a_putc(c);
+            
+        }     
     }
 }
