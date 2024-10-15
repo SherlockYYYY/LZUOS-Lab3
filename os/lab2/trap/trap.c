@@ -308,5 +308,4 @@ void ctrl_commands(int8_t c)
         print_trapframe(global_tf);
         sbi_shutdown(); 
     }
-    
 }

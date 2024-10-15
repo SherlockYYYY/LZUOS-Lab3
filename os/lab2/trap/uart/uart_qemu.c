@@ -3,6 +3,7 @@
 #include <trap.h>
 #include <string.h>
 #include <rtc.h>
+#include "uart.h"
 static int8_t uart_16550a_read();
 static void uart_16550a_directly_write(int8_t c);
 static void uart_16550a_interrupt_handler();
@@ -83,15 +84,14 @@ static void uart_16550a_putc(int8_t c)
     uart_16550a_directly_write(c);
 }
 
-void keyboard_interrupter(int8_t c)
+void  keyboard_interrupter(int8_t c)
 {
     if(c==0x12 || c==0x13)
     {
-        kprintf("executed a control command right now:\n");
         ctrl_commands(c);
     }
+    
 }
-
 
 static void uart_16550a_interrupt_handler()
 {
@@ -102,9 +102,9 @@ static void uart_16550a_interrupt_handler()
         {
             if(c==0xd)
                 kprintf("\n");
-            keyboard_interrupter(c);
-            uart_16550a_putc(c);
             
-        }     
+            uart_16550a_putc(c);
+            keyboard_interrupter(c);
+        } 
     }
 }
