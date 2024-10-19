@@ -84,27 +84,43 @@ static void uart_16550a_putc(int8_t c)
     uart_16550a_directly_write(c);
 }
 
-void  keyboard_interrupter(int8_t c)
-{
-    if(c==0x12 || c==0x13)
-    {
-        ctrl_commands(c);
+/* 全局变量，用于跟踪Shift键的状态 */
+static int shift_pressed = 0;
+
+void keyboard_interrupter(int8_t c) {
+    if (c == 'A' ) {
+        /* 切换 shift_pressed 的状态 */
+        shift_pressed = !shift_pressed;
+        if (!shift_pressed) {
+            kputs("echo on");
+        } else {
+            kputs("echo off");
+        }
+        if (shift_pressed) {
+            /* 如果 Shift 键按下，输出 '*' */
+            uart_16550a_putc('*');
+        }
+    } else if (!shift_pressed) {
+        /* 如果 Shift 键未按下，正常处理字符 */
+        uart_16550a_putc(c);
+    } else {
+        /* 如果 Shift 键按下，不处理字符，只输出 '*' */
+        uart_16550a_putc('*');
     }
-    
 }
 
-static void uart_16550a_interrupt_handler()
-{
+void uart_16550a_interrupt_handler() {
     volatile struct uart_qemu_regs *regs = (struct uart_qemu_regs *)uart_device.uart_start_addr;
     while (regs->LSR & (1 << LSR_DR)) {
         int8_t c = uart_read();
-        if (c > -1)
-        {
-            if(c==0xd)
-                kprintf("\n");
-            
-            uart_16550a_putc(c);
-            keyboard_interrupter(c);
-        } 
+        if (c > -1) {
+            if (c == 0x12 || c == 0x13) {
+                /* 如果按下的是Ctrl+R或Ctrl+S，调用ctrl_commands函数 */
+                ctrl_commands(c);
+            } else {
+                /* 处理其他字符 */
+                keyboard_interrupter(c);
+            }
+        }
     }
 }
