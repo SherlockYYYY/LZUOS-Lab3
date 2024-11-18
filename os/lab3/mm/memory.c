@@ -1,3 +1,4 @@
+
 /**
  * @file memory.c
  * @brief 实现物理内存管理
@@ -56,6 +57,7 @@ void free_page(uint64_t addr)
     assert(mem_map[MAP_NR(addr)] != 0,
            "free_page(): trying to free free page");
     --mem_map[MAP_NR(addr)];
+     kprintf("Freed page at physical address: %p\n", addr); // 输出释放地址
 }
 
 /**
@@ -71,6 +73,7 @@ uint64_t get_free_page(void)
             mem_map[i] = 1;
             uint64_t ret = MEM_START + i * PAGE_SIZE;
             memset((void *)ret, 0, PAGE_SIZE);
+            kprintf("Allocated page at physical address: %p\n", (void *)ret); // 使用 %p 输出
             return ret;
         }
     }
