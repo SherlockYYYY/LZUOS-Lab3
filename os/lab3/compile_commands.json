@@ -1,0 +1,186 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "kdebug.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/lib",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/lib/kdebug.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "sbi.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/lib",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/lib/sbi.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "string.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/lib",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/lib/string.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I",
+      "../include",
+      "-c",
+      "main.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/init",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/init/main.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "clock.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap/clock.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "plic.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap/plic.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "trap.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap/trap.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "uart.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap/uart.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-g",
+      "-c",
+      "-o",
+      "trapentry.o",
+      "trapentry.S"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap/trapentry.S",
+    "output": "/home/yd/BHone/code/lzu_oslab/os/lab3/trap/trapentry.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "buddy.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/mm",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/mm/buddy.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/riscv64-linux-gnu-gcc",
+      "-mcmodel=medany",
+      "-Wall",
+      "-g3",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-fno-strict-aliasing",
+      "-nostdinc",
+      "-I../include",
+      "-c",
+      "memory.c"
+    ],
+    "directory": "/home/yd/BHone/code/lzu_oslab/os/lab3/mm",
+    "file": "/home/yd/BHone/code/lzu_oslab/os/lab3/mm/memory.c"
+  }
+]
