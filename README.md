@@ -1,13 +1,6 @@
-# lzu_oslab
-A simple OS running on RISC-V for education
-
-要想部署支持 RISC-V 的 QEMU，可以执行以下命令：
-
-```shell
-sudo apt update
-sudo apt install git
-# 提前配置 ssh 的密钥方便上传
-git clone git@github.com:LZU-OSLab/lzu_oslab.git
-cd lzu_oslab
-./setup.sh
-```
+# LZUOS-Lab3
+1.lzuos操作系统大作业实验三，老师是liu li(female)
+2.本着计算机的Open Source伟大精神，我们操作系统汪汪队开源Lab3代码,各位按需自取
+3.在os/lab3中有一个文件名为“Lab3作业要求”的png图片，大家可以对照一下跟自己的作业要求是否一样，别借鉴错了
+4.这个项目做的不是很好，但是能运行，可以优化一下
+5.本项目完全免费，但在os/lab3中还有一个"赞助我们.jpg"图片，是支付宝收款码，各位如果觉得我们的项目对你有帮助并且你愿意赞助我们，请扫码打赏，非常感谢
